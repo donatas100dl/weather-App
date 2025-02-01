@@ -62,7 +62,7 @@ const getDayInfo = async (req, res) => {
     })
     if (!weatherData) return res.status(404).json({message: "city not found"})
     const daysWeather = weatherData.forecast.filter(item => item.date === formattedDate)
-    return res.status(200).json(daysWeather)
+    return res.status(200).json({data: daysWeather})
 
   } catch (error) {
     return res.status(404).json({ message: error.message, error: error })

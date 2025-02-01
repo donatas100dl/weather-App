@@ -1,0 +1,33 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,html,#root {
+    width: 100%;
+    height: 100%;  
+}
+
+#root {
+    background-image: url("./assets/bg.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+#root::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0082D2;
+    opacity: 50%;
+    z-index: 0;
+}
